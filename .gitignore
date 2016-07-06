@@ -1,0 +1,9 @@
+.DS_Store
+*~
+*.pkl
+*.gz
+*.pyc
+__pycache__/
+.ipynb_checkpoints/		
+/src/ksaito/src/.idea/
+/src/ksaito/src/dataset/cifar-10-batches-py/
