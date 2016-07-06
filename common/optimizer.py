@@ -1,8 +1,7 @@
 # coding: utf-8
-import numpy as np
 
 
-class SGD():
+class SGD:
 
     """確率的勾配降下法（Stochastic Gradient Descent）"""
 
@@ -14,7 +13,7 @@ class SGD():
             params[key] -= self.lr * grads[key] 
 
 
-class Momentum():
+class Momentum:
 
     """Momentum SGD"""
 
@@ -34,7 +33,7 @@ class Momentum():
             params[key] += self.v[key]
 
 
-class Nesterov():
+class Nesterov:
 
     """Nesterov's Accelerated Gradient (http://arxiv.org/abs/1212.0901)"""
 
@@ -56,7 +55,7 @@ class Nesterov():
             params[key] -= (1 + self.momentum) * self.lr * grads[key]
 
 
-class AdaGrad():
+class AdaGrad:
 
     """AdaGrad"""
 
@@ -75,7 +74,7 @@ class AdaGrad():
             params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
 
 
-class RMSprop():
+class RMSprop:
 
     """RMSprop"""
 
@@ -96,7 +95,7 @@ class RMSprop():
             params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
 
 
-class Adam():
+class Adam:
 
     """Adam (http://arxiv.org/abs/1412.6980v8)"""
 
