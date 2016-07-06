@@ -1,4 +1,4 @@
-# ゼロから学ぶ Deep Learning
+# ゼロから作る Deep Learning
 
 ---
 
@@ -6,7 +6,7 @@
 
 ---
 
-本リポジトリはオライリー・ジャパン発行書籍『[ゼロから学ぶ Deep Learning](http://www.oreilly.co.jp/books/978487311★/)』のサポートサイトです。
+本リポジトリはオライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/978487311★/)』のサポートサイトです。
 
 ## サンプルコード
 
