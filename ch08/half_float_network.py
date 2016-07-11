@@ -17,7 +17,7 @@ x_test = x_test[:sampled]
 t_test = t_test[:sampled]
 
 print("caluculate accuracy (float64) ... ")
-#print(network.accuracy(x_test, t_test))
+print(network.accuracy(x_test, t_test))
 
 # float16に型変換
 x_test = x_test.astype(np.float16)
