@@ -49,4 +49,4 @@ $ python train_nueralnet.py
 
 ## 正誤表
 
-まだありません。誤植など間違いを見つけた方は、japan＠oreilly.co.jpまでお知らせください。
+まだありません。誤植など間違いを見つけた方は、[japan＠oreilly.co.jp](japan＠oreilly.co.jp)までお知らせください。
