@@ -44,7 +44,7 @@ $ python train_nueralnet.py
 
 ## ライセンス
 
-本リポジトリのソースコードは[MITライセンス](https://opensource.org/licenses/MIT)です。
+本リポジトリのソースコードは[MITライセンス](http://www.opensource.org/licenses/MIT)です。
 商用・非商用問わず、自由にご利用ください。
 
 ## 正誤表
