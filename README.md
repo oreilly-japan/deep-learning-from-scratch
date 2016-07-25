@@ -36,11 +36,16 @@
 
 ```
 $ cd ch01
-$ python Man.py
+$ python man.py
 
 $ cd ../ch05
 $ python train_nueralnet.py
 ```
+
+## ライセンス
+
+本リポジトリのソースコードはMITライセンスです。
+商用・非商用問わず、自由にご利用ください。
 
 ## 正誤表
 
