@@ -41,8 +41,8 @@ results_val = {}
 results_train = {}
 for _ in range(optimization_trial):
     # 探索したハイパーパラメータの範囲を指定===============
-    weight_decay = 10 ** np.random.uniform(-4, -8)
-    lr = 10 ** np.random.uniform(-2, -6)
+    weight_decay = 10 ** np.random.uniform(-8, -4)
+    lr = 10 ** np.random.uniform(-6, -2)
     # ================================================
 
     val_acc_list, train_acc_list = __train(lr, weight_decay)
