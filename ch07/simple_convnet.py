@@ -131,11 +131,11 @@ class SimpleConvNet:
 
         # 設定
         grads = {}
-        grads['W1'] = self.layers[0].dw
+        grads['W1'] = self.layers[0].dW
         grads['b1'] = self.layers[0].db
-        grads['W2'] = self.layers[3].dw
+        grads['W2'] = self.layers[3].dW
         grads['b2'] = self.layers[3].db
-        grads['W3'] = self.layers[5].dw
+        grads['W3'] = self.layers[5].dW
         grads['b3'] = self.layers[5].db
 
         return grads
