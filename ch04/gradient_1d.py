@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pylab as plt
 
 
-def numerical_gradient(f, x):
+def numerical_diff(f, x):
     h = 1e-4 # 0.0001
     return (f(x+h) - f(x-h)) / (2*h)
 
@@ -13,7 +13,7 @@ def function_1(x):
 
 
 def tangent_line(f, x):
-    d = numerical_gradient(f, x)
+    d = numerical_diff(f, x)
     print(d)
     y = f(x) - d*x
     return lambda t: d*t + y
