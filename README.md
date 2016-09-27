@@ -49,4 +49,14 @@ $ python train_nueralnet.py
 
 ## 正誤表
 
+下記の誤りがありました。お詫びして訂正いたします。
+
+### 第1刷をお持ちの方
+
+|場所             |誤                                             |正                                              |
+|:--              |:--                                            |:--                                             |
+|7章 P.227 図7-20 |<img src="./errata/fig07_20-old.png" alt="誤"> | <img src="./errata/fig07_20-new.png" alt="正"> |
+
+### 第2刷をお持ちの方
+
 まだありません。誤植など間違いを見つけた方は、[japan＠oreilly.co.jp](<mailto:japan＠oreilly.co.jp>)までお知らせください。
