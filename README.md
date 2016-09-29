@@ -2,7 +2,7 @@
 
 ---
 
-![表紙](deep-learning-from-scratch.png)
+![表紙](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)
 
 ---
 
@@ -17,7 +17,8 @@
 |...        |...                          |
 |ch08       |8章で使用するソースコード    |
 |common     |共通で使用するソースコード   |
-|dataset    |データセット用のソースコード | 
+|dataset    |データセット用のソースコード |
+
 
 ソースコードの解説は本書籍をご覧ください。
 
@@ -63,5 +64,5 @@ $ python train_nueralnet.py
 
 |頁               |誤  |正  |
 |:--              |:-- |:-- |
-|7章 P.227 図7-20 |<img src="./errata/fig07_20-old.png" alt="誤"> | <img src="./errata/fig07_20-new.png" alt="正"> |
+|7章 P.227 図7-20 |<img src="https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/fig07_20-old.png" alt="誤"> | <img src="https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/fig07_20-new.png" alt="正"> |
 
