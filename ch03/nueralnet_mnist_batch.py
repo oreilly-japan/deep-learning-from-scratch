@@ -5,7 +5,7 @@ import numpy as np
 import pickle
 from dataset.mnist import load_mnist
 from common.functions import sigmoid, softmax
-
+import time
 
 def get_data():
     (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=True, one_hot_label=False)
@@ -38,10 +38,13 @@ network = init_network()
 batch_size = 100 # バッチの数
 accuracy_cnt = 0
 
+start_time = time.time()#開始時刻
 for i in range(0, len(x), batch_size):
     x_batch = x[i:i+batch_size]
     y_batch = predict(network, x_batch)
     p = np.argmax(y_batch, axis=1)
     accuracy_cnt += np.sum(p == t[i:i+batch_size])
+end_time = time.time()#終了時刻
 
+print("Elapsed time: %s seconds" % (end_time - start_time))#処理時間
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))

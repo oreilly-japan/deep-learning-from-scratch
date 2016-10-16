@@ -5,7 +5,7 @@ import numpy as np
 import pickle
 from dataset.mnist import load_mnist
 from common.functions import sigmoid, softmax
-
+import time
 
 def get_data():
     (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=True, one_hot_label=False)
@@ -35,10 +35,14 @@ def predict(network, x):
 x, t = get_data()
 network = init_network()
 accuracy_cnt = 0
+
+start_time = time.time()#開始時刻
 for i in range(len(x)):
     y = predict(network, x[i])
     p= np.argmax(y) # 最も確率の高い要素のインデックスを取得
     if p == t[i]:
         accuracy_cnt += 1
+end_time = time.time()#終了時刻
 
+print("Elapsed time: %s seconds" % (end_time - start_time))#処理時間
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
