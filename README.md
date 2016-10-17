@@ -59,7 +59,7 @@ $ python train_nueralnet.py
 |頁           |誤  |正  |
 |:--          |:-- |:-- |
 |3章 P.76 L.4   |`ch03/nueralnet_mnist.py` |`ch03/neuralnet_mnist.py` |
-|4章 P.89 L.19  |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.5, 0.0]`<br>`>>> cross_entropy_error(np.array(y), np.array(t))`<br>`0.72250000000000003` |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.0, 0.0]`<br>`>>> cross_entropy_error(np.array(y), np.array(t))`<br>`0.59750000000000003` |
+|4章 P.89 L.19  |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.5, 0.0]`<br>`>>> mean_squared_error(np.array(y), np.array(t))`<br>`0.72250000000000003` |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.0, 0.0]`<br>`>>> mean_squared_error(np.array(y), np.array(t))`<br>`0.59750000000000003` |
 |4章 P.91 L.15  |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.5, 0.0]`<br>`>>> cross_entropy_error(np.array(y), np.array(t))`<br>`2.3025850919940458` |`>>> y = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.0, 0.0]`<br>`>>> cross_entropy_error(np.array(y), np.array(t))`<br>`2.3025840929945458` |
 |4章 P.117 L.29 |`ch04/train_nueralnet.py` |`ch04/train_neuralnet.py` |
 |4章 P.118 L.7  |`# ハイパーパラメータ`<br>`iters_num = 10000`<br>`batch_size = 100`<br>`learning_rate = 0.1` |`# ハイパーパラメータ`<br>`iters_num = 10000`<br>`train_size = x_train.shape[0]`<br>`batch_size = 100`<br>`learning_rate = 0.1` |
