@@ -54,6 +54,12 @@ $ python train_nueralnet.py
 
 本ページに掲載されていない誤植など間違いを見つけた方は、[japan＠oreilly.co.jp](<mailto:japan＠oreilly.co.jp>)までお知らせください。
 
+### 第4刷まで
+
+|頁              |誤     |正     |
+|:--             |:--    |:--    |
+|目次、5章、索引 |連鎖率 |連鎖律 |
+
 ### 第3刷まで
 
 |頁           |誤  |正  |
