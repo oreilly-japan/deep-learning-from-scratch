@@ -56,9 +56,10 @@ $ python train_nueralnet.py
 
 ### 第4刷まで
 
-|頁              |誤     |正     |
-|:--             |:--    |:--    |
-|目次、5章、索引 |連鎖率 |連鎖律 |
+|頁                |誤     |正     |
+|:--               |:--    |:--    |
+|目次、5章、索引   |連鎖率 |連鎖律 |
+|7章 P.236 L.10,14 |1989年 |1998年 |
 
 ### 第3刷まで
 
@@ -83,4 +84,3 @@ $ python train_nueralnet.py
 |頁               |誤  |正  |
 |:--              |:-- |:-- |
 |7章 P.227 図7-20 |<img src="https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/fig07_20-old.png" alt="誤"> | <img src="https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/fig07_20-new.png" alt="正"> |
-
