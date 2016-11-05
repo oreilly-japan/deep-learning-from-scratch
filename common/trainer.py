@@ -17,13 +17,13 @@ class Trainer:
         self.t_train = t_train
         self.x_test = x_test
         self.t_test = t_test
-        self.epocsh = epochs
+        self.epochs = epochs
         self.batch_size = mini_batch_size
         self.evaluate_sample_num_per_epoch = evaluate_sample_num_per_epoch
 
         # optimzer
         optimizer_class_dict = {'sgd':SGD, 'momentum':Momentum, 'nesterov':Nesterov,
-                                'addgrad':AdaGrad, 'rmsprpo':RMSprop, 'adam':Adam}
+                                'adagrad':AdaGrad, 'rmsprpo':RMSprop, 'adam':Adam}
         self.optimizer = optimizer_class_dict[optimizer.lower()](**optimizer_param)
         
         self.train_size = x_train.shape[0]
