@@ -8,7 +8,7 @@ from common.gradient import numerical_gradient
 
 class simpleNet:
     def __init__(self):
-        self.W = np.random.rand(2,3)
+        self.W = np.random.randn(2,3)
 
     def predict(self, x):
         return np.dot(x, self.W)
