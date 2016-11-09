@@ -23,7 +23,7 @@ trainer = Trainer(network, x_train, t_train, x_test, t_test,
                   optimizer='sgd', optimizer_param={'lr': 0.01}, verbose=True)
 trainer.train()
 
-train_acc_list, test_acc_list = trainer.test_acc_list, trainer.train_acc_list
+train_acc_list, test_acc_list = trainer.train_acc_list, trainer.test_acc_list
 
 # グラフの描画==========
 markers = {'train': 'o', 'test': 's'}
