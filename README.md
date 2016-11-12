@@ -52,7 +52,7 @@ $ python train_nueralnet.py
 
 本書の正誤情報は以下のページで公開しています。
 
-https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
+https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
 
 本ページに掲載されていない誤植など間違いを見つけた方は、[japan＠oreilly.co.jp](<mailto:japan＠oreilly.co.jp>)までお知らせください。
 
