@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.pardir)
 
 import numpy as np
 from dataset.mnist import load_mnist
