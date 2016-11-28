@@ -136,7 +136,7 @@ class BatchNormalization:
         self.input_shape = x.shape
         if x.ndim != 2:
             N, C, H, W = x.shape
-            x = x.transpose(1, 0, 2, 3).reshape(C, -1) 
+            x = x.reshape(N, -1)
 
         out = self.__forward(x, train_flg)
         
@@ -171,7 +171,7 @@ class BatchNormalization:
     def backward(self, dout):
         if dout.ndim != 2:
             N, C, H, W = dout.shape
-            dout = dout.transpose(1, 0, 2, 3).reshape(C, -1) 
+            dout = dout.reshape(N, -1)
 
         dx = self.__backward(dout)
 
