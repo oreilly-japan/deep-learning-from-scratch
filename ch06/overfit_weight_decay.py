@@ -15,8 +15,11 @@ from common.optimizer import SGD
 x_train = x_train[:300]
 t_train = t_train[:300]
 
-#weight_decay_lambda = 0
+# weight decay（荷重減衰）の設定 =======================
+#weight_decay_lambda = 0 # weight decayを使用しない場合
 weight_decay_lambda = 0.1
+# ====================================================
+
 network = MultiLayerNet(input_size=784, hidden_size_list=[100, 100, 100, 100, 100, 100], output_size=10,
                         weight_decay_lambda=weight_decay_lambda)
 optimizer = SGD(lr=0.01)
