@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 from common.functions import *
 from common.gradient import numerical_gradient
 
@@ -8,7 +8,7 @@ from common.gradient import numerical_gradient
 class TwoLayerNet:
 
     def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
-        # 重みの初期化
+        # 가중치 초기화
         self.params = {}
         self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
@@ -26,7 +26,7 @@ class TwoLayerNet:
         
         return y
         
-    # x:入力データ, t:教師データ
+    # x : 입력 데이터, t : 정답 레이블
     def loss(self, x, t):
         y = self.predict(x)
         
@@ -40,7 +40,7 @@ class TwoLayerNet:
         accuracy = np.sum(y == t) / float(x.shape[0])
         return accuracy
         
-    # x:入力データ, t:教師データ
+    # x : 입력 데이터, t : 정답 레이블
     def numerical_gradient(self, x, t):
         loss_W = lambda W: self.loss(x, t)
         
