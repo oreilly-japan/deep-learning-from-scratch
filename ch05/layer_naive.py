@@ -14,7 +14,7 @@ class MulLayer:
         return out
 
     def backward(self, dout):
-        dx = dout * self.y
+        dx = dout * self.y  # x와 y를 바꾼다.
         dy = dout * self.x
 
         return dx, dy
