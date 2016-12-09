@@ -44,12 +44,12 @@ class Affine:
         
         self.x = None
         self.original_x_shape = None
-        # 重み・バイアスパラメータの微分
+        # 가중치와 편향 매개변수의 미분
         self.dW = None
         self.db = None
 
     def forward(self, x):
-        # テンソル対応
+        # 텐서 대응
         self.original_x_shape = x.shape
         x = x.reshape(x.shape[0], -1)
         self.x = x
@@ -63,7 +63,7 @@ class Affine:
         self.dW = np.dot(self.x.T, dout)
         self.db = np.sum(dout, axis=0)
         
-        dx = dx.reshape(*self.original_x_shape)  # 入力データの形状に戻す（テンソル対応）
+        dx = dx.reshape(*self.original_x_shape)  # 입력 데이터 성형(텐서 대응)
         return dx
 
 
