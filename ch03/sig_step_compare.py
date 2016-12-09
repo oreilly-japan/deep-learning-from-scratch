@@ -16,5 +16,5 @@ y2 = step_function(x)
 
 plt.plot(x, y1)
 plt.plot(x, y2, 'k--')
-plt.ylim(-0.1, 1.1) #図で描画するy軸の範囲を指定
+plt.ylim(-0.1, 1.1) # y축 범위 지정
 plt.show()
