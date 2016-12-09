@@ -21,6 +21,7 @@ train_loss_list = []
 train_acc_list = []
 test_acc_list = []
 
+# 1에폭당 반복 수
 iter_per_epoch = max(train_size / batch_size, 1)
 
 for i in range(iters_num):
@@ -41,6 +42,7 @@ for i in range(iters_num):
     loss = network.loss(x_batch, t_batch)
     train_loss_list.append(loss)
     
+    # 1에폭당 정확도 계산
     if i % iter_per_epoch == 0:
         train_acc = network.accuracy(x_train, t_train)
         test_acc = network.accuracy(x_test, t_test)
