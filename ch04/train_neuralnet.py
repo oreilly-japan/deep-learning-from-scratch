@@ -1,17 +1,17 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
-# データの読み込み
+# 데이터 읽기
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
-iters_num = 10000  # 繰り返しの回数を適宜設定する
+iters_num = 10000  # 반복 횟수를 적절히 설정한다.
 train_size = x_train.shape[0]
 batch_size = 100
 learning_rate = 0.1
@@ -27,11 +27,11 @@ for i in range(iters_num):
     x_batch = x_train[batch_mask]
     t_batch = t_train[batch_mask]
     
-    # 勾配の計算
+    # 기울기 계산
     #grad = network.numerical_gradient(x_batch, t_batch)
     grad = network.gradient(x_batch, t_batch)
     
-    # パラメータの更新
+    # 매개변수 갱신
     for key in ('W1', 'b1', 'W2', 'b2'):
         network.params[key] -= learning_rate * grad[key]
     
@@ -45,7 +45,7 @@ for i in range(iters_num):
         test_acc_list.append(test_acc)
         print("train acc, test acc | " + str(train_acc) + ", " + str(test_acc))
 
-# グラフの描画
+# 그래프 그리기
 markers = {'train': 'o', 'test': 's'}
 x = np.arange(len(train_acc_list))
 plt.plot(x, train_acc_list, label='train acc')
