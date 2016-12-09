@@ -69,10 +69,10 @@ class Affine:
 
 class SoftmaxWithLoss:
     def __init__(self):
-        self.loss = None
-        self.y = None # softmaxの出力
-        self.t = None # 教師データ
-
+        self.loss = None # 손실
+        self.y = None    # softmax의 출력
+        self.t = None    # 정답 레이블(원-핫 벡터)
+        
     def forward(self, x, t):
         self.t = t
         self.y = softmax(x)
@@ -82,7 +82,7 @@ class SoftmaxWithLoss:
 
     def backward(self, dout=1):
         batch_size = self.t.shape[0]
-        if self.t.size == self.y.size: # 教師データがone-hot-vectorの場合
+        if self.t.size == self.y.size: # 정답 레이블이 원-핫 벡터일 때
             dx = (self.y - self.t) / batch_size
         else:
             dx = self.y.copy()
