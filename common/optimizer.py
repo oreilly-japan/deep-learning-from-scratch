@@ -3,7 +3,7 @@ import numpy as np
 
 class SGD:
 
-    """確率的勾配降下法（Stochastic Gradient Descent）"""
+    """확률적 경사 하강법（Stochastic Gradient Descent）"""
 
     def __init__(self, lr=0.01):
         self.lr = lr
@@ -15,7 +15,7 @@ class SGD:
 
 class Momentum:
 
-    """Momentum SGD"""
+    """모멘텀 SGD"""
 
     def __init__(self, lr=0.01, momentum=0.9):
         self.lr = lr
@@ -36,7 +36,8 @@ class Momentum:
 class Nesterov:
 
     """Nesterov's Accelerated Gradient (http://arxiv.org/abs/1212.0901)"""
-
+    # NAG는 모멘텀에서 한 단계 발전한 방법이다. (http://newsight.tistory.com/224)
+    
     def __init__(self, lr=0.01, momentum=0.9):
         self.lr = lr
         self.momentum = momentum
