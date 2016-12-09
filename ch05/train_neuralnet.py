@@ -6,7 +6,7 @@ import numpy as np
 from dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
-# データの読み込み
+# 데이터 읽기
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
@@ -27,11 +27,11 @@ for i in range(iters_num):
     x_batch = x_train[batch_mask]
     t_batch = t_train[batch_mask]
     
-    # 勾配
-    #grad = network.numerical_gradient(x_batch, t_batch)
-    grad = network.gradient(x_batch, t_batch)
+    # 기울기 계산
+    #grad = network.numerical_gradient(x_batch, t_batch) # 수치 미분 방식
+    grad = network.gradient(x_batch, t_batch) # 오차역전파법 방식(훨씬 빠르다)
     
-    # 更新
+    # 갱신
     for key in ('W1', 'b1', 'W2', 'b2'):
         network.params[key] -= learning_rate * grad[key]
     
