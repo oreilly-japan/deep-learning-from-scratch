@@ -14,8 +14,8 @@ from common.trainer import Trainer
 x_train = x_train[:300]
 t_train = t_train[:300]
 
-# Dropuout 유무와 비울 설정 ========================
-use_dropout = True  # Dropout을 쓰지 않을 때는 False
+# 드롭아웃 사용 유무와 비울 설정 ========================
+use_dropout = True  # 드롭아웃을 쓰지 않을 때는 False
 dropout_ratio = 0.2
 # ====================================================
 
