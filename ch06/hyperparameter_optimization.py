@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
@@ -10,11 +10,11 @@ from common.trainer import Trainer
 
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True)
 
-# 高速化のため訓練データの削減
+# 결과를 빠르게 얻기 위해 훈련 데이터를 줄임
 x_train = x_train[:500]
 t_train = t_train[:500]
 
-# 検証データの分離
+# 20%를 검증 데이터로 분할
 validation_rate = 0.20
 validation_num = x_train.shape[0] * validation_rate
 x_train, t_train = shuffle_dataset(x_train, t_train)
@@ -35,12 +35,12 @@ def __train(lr, weight_decay, epocs=50):
     return trainer.test_acc_list, trainer.train_acc_list
 
 
-# ハイパーパラメータのランダム探索======================================
+# 하이퍼파라미터 무작위 탐색======================================
 optimization_trial = 100
 results_val = {}
 results_train = {}
 for _ in range(optimization_trial):
-    # 探索したハイパーパラメータの範囲を指定===============
+    # 탐색한 하이퍼파라미터의 범위 지정===============
     weight_decay = 10 ** np.random.uniform(-8, -4)
     lr = 10 ** np.random.uniform(-6, -2)
     # ================================================
@@ -51,7 +51,7 @@ for _ in range(optimization_trial):
     results_val[key] = val_acc_list
     results_train[key] = train_acc_list
 
-# グラフの描画========================================================
+# 그래프 그리기========================================================
 print("=========== Hyper-Parameter Optimization Result ===========")
 graph_draw_num = 20
 col_num = 5
