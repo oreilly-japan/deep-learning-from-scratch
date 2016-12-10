@@ -1,7 +1,7 @@
 # coding: utf-8
 import os
 import sys
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
 from common.util import smooth_curve
@@ -9,7 +9,7 @@ from common.multi_layer_net import MultiLayerNet
 from common.optimizer import *
 
 
-# 0:MNISTデータの読み込み==========
+# 0. MNIST 데이터 읽기==========
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True)
 
 train_size = x_train.shape[0]
@@ -17,7 +17,7 @@ batch_size = 128
 max_iterations = 2000
 
 
-# 1:実験の設定==========
+# 1. 실험용 설정==========
 optimizers = {}
 optimizers['SGD'] = SGD()
 optimizers['Momentum'] = Momentum()
@@ -34,7 +34,7 @@ for key in optimizers.keys():
     train_loss[key] = []    
 
 
-# 2:訓練の開始==========
+# 2. 훈련 시작==========
 for i in range(max_iterations):
     batch_mask = np.random.choice(train_size, batch_size)
     x_batch = x_train[batch_mask]
@@ -54,7 +54,7 @@ for i in range(max_iterations):
             print(key + ":" + str(loss))
 
 
-# 3.グラフの描画==========
+# 3. 그래프 그리기==========
 markers = {"SGD": "o", "Momentum": "x", "AdaGrad": "s", "Adam": "D"}
 x = np.arange(max_iterations)
 for key in optimizers.keys():
