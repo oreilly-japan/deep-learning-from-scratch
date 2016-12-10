@@ -9,8 +9,8 @@ from common.gradient import numerical_gradient
 
 
 class SimpleConvNet:
-    """단순한 합성곱 네트워크
-
+    """단순한 합성곱 신경망
+    
     conv - relu - pool - affine - relu - affine - softmax
     
     Parameters
