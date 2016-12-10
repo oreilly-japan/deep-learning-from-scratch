@@ -1,39 +1,40 @@
-# ゼロから作る Deep Learning
+# 밑바닥부터 시작하는 딥 
+# (원서 : ゼロから作る Deep Learning)
 
 ---
 
-![表紙](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)
+![표지](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)
 
 ---
 
-本リポジトリはオライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』のサポートサイトです。
+이 저장소는 『[밑바닥부터 시작하는 딥 러닝](http://www.hanbit.co.kr/)』(한빛미디어, 2017)의 지원 사이트입니다.
 
-## ファイル構成
+## 파일 구성
 
-|フォルダ名 |説明                         |
+|폴더 이름 |설명                         |
 |:--        |:--                          |
-|ch01       |1章で使用するソースコード    |
-|ch02       |2章で使用するソースコード    |
+|ch01       |1장에서 사용하는 소스 코드 |
+|ch02       |2장에서 사용하는 소스 코드    |
 |...        |...                          |
-|ch08       |8章で使用するソースコード    |
-|common     |共通で使用するソースコード   |
-|dataset    |データセット用のソースコード |
+|ch08       |8장에서 사용하는 소스 코드    |
+|common     |공통으로 사용하는 소스 코드  |
+|dataset    |데이터셋용 소스 코드 |
 
 
-ソースコードの解説は本書籍をご覧ください。
+소스 코드 해설은 책을 참고하세요.
 
-## 必要条件
-ソースコードを実行するには、下記のソフトウェアがインストールされている必要があります。
+## 요구사항
+소스 코드를 실행하려면 아래의 소프트웨어가 설치되어 있어야 합니다.
 
-* Python 3.x
+* 파이썬 3.x
 * NumPy
 * Matplotlib
 
-※Pythonのバージョンは、3系を利用します。
+※ Python은 3 버전을 이용합니다.
 
-## 実行方法
+## 실행 방법
 
-各章のフォルダへ移動して、Pythonコマンドを実行します。
+각 장의 폴더로 이동하연 파이썬 명령을 실행하세요.
 
 ```
 $ cd ch01
@@ -43,16 +44,15 @@ $ cd ../ch05
 $ python train_nueralnet.py
 ```
 
-## ライセンス
+## 라이선스
 
-本リポジトリのソースコードは[MITライセンス](http://www.opensource.org/licenses/MIT)です。
-商用・非商用問わず、自由にご利用ください。
+이 저장소의 소스 코드는 [MIT 라이선스](http://www.opensource.org/licenses/MIT)를 따릅니다.
+비상용뿐 아니라 상용으로도 자유롭게 이용하실 수 있습니다.
 
-## 正誤表
+## 책의 오류
 
-本書の正誤情報は以下のページで公開しています。
+이 책의 오탈자 등 오류 정보는 아래 페이지에서 확인하실 수 있습니다.
 
-https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
+... https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
 
-本ページに掲載されていない誤植など間違いを見つけた方は、[japan＠oreilly.co.jp](<mailto:japan＠oreilly.co.jp>)までお知らせください。
-
+이 페이지에 등록되지 않은 오류는 ... 로 알려주시기 바랍니다.
