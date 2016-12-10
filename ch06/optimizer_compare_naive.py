@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import OrderedDict
@@ -49,11 +49,11 @@ for key in optimizers:
     X, Y = np.meshgrid(x, y) 
     Z = f(X, Y)
     
-    # for simple contour line  
+    # 외곽선 단순화
     mask = Z > 7
     Z[mask] = 0
     
-    # plot 
+    # 그래프 그리기
     plt.subplot(2, 2, idx)
     idx += 1
     plt.plot(x_history, y_history, 'o-', color="red")
