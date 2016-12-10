@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 from collections import OrderedDict
 from common.layers import *
@@ -48,8 +48,8 @@ class MultiLayerNet:
         self.last_layer = SoftmaxWithLoss()
 
     def __init_weight(self, weight_init_std):
-        """가중치 초깃값 생성
-
+        """가중치 초기화
+        
         Parameters
         ----------
         weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）
