@@ -1,29 +1,28 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir) # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir) # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 from collections import OrderedDict
 from common.layers import *
 from common.gradient import numerical_gradient
 
 class MultiLayerNetExtend:
-    """拡張版の全結合による多層ニューラルネットワーク
-    
-    Weiht Decay、Dropout、Batch Normalizationの機能を持つ
+    """완전 연결 다층 신경망(확장판)
+    가중치 감소, 드롭아웃, 배치 정규화 구현
 
     Parameters
     ----------
-    input_size : 入力サイズ（MNISTの場合は784）
-    hidden_size_list : 隠れ層のニューロンの数のリスト（e.g. [100, 100, 100]）
-    output_size : 出力サイズ（MNISTの場合は10）
-    activation : 'relu' or 'sigmoid'
-    weight_init_std : 重みの標準偏差を指定（e.g. 0.01）
-        'relu'または'he'を指定した場合は「Heの初期値」を設定
-        'sigmoid'または'xavier'を指定した場合は「Xavierの初期値」を設定
-    weight_decay_lambda : Weight Decay（L2ノルム）の強さ
-    use_dropout: Dropoutを使用するかどうか
-    dropout_ration : Dropoutの割り合い
-    use_batchNorm: Batch Normalizationを使用するかどうか
+    input_size : 입력 크기（MNIST의 경우엔 784）
+    hidden_size_list : 각 은닉층의 뉴런 수를 담은 리스트（e.g. [100, 100, 100]）
+    output_size : 출력 크기（MNIST의 경우엔 10）
+    activation : 활성화 함수 - 'relu' 혹은 'sigmoid'
+    weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）
+        'relu'나 'he'로 지정하면 'He 초깃값'으로 설정
+        'sigmoid'나 'xavier'로 지정하면 'Xavier 초깃값'으로 설정
+    weight_decay_lambda : 가중치 감소(L2 법칙)의 세기
+    use_dropout : 드롭아웃 사용 여부
+    dropout_ration : 드롭아웃 비율
+    use_batchNorm : 배치 정규화 사용 여부
     """
     def __init__(self, input_size, hidden_size_list, output_size,
                  activation='relu', weight_init_std='relu', weight_decay_lambda=0, 
@@ -37,10 +36,10 @@ class MultiLayerNetExtend:
         self.use_batchnorm = use_batchnorm
         self.params = {}
 
-        # 重みの初期化
+        # 가중치 초기화
         self.__init_weight(weight_init_std)
 
-        # レイヤの生成
+        # 계층 생성
         activation_layer = {'sigmoid': Sigmoid, 'relu': Relu}
         self.layers = OrderedDict()
         for idx in range(1, self.hidden_layer_num+1):
@@ -62,13 +61,13 @@ class MultiLayerNetExtend:
         self.last_layer = SoftmaxWithLoss()
 
     def __init_weight(self, weight_init_std):
-        """重みの初期値設定
-
+        """가중치 초기화
+        
         Parameters
         ----------
-        weight_init_std : 重みの標準偏差を指定（e.g. 0.01）
-            'relu'または'he'を指定した場合は「Heの初期値」を設定
-            'sigmoid'または'xavier'を指定した場合は「Xavierの初期値」を設定
+        weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）
+            'relu'나 'he'로 지정하면 'He 초깃값'으로 설정
+            'sigmoid'나 'xavier'로 지정하면 'Xavier 초깃값'으로 설정
         """
         all_size_list = [self.input_size] + self.hidden_size_list + [self.output_size]
         for idx in range(1, len(all_size_list)):
@@ -90,8 +89,12 @@ class MultiLayerNetExtend:
         return x
 
     def loss(self, x, t, train_flg=False):
-        """損失関数を求める
-        引数のxは入力データ、tは教師ラベル
+        """손실 함수를 구한다.
+        
+        Parameters
+        ----------
+        x : 입력 데이터
+        t : 정답 레이블 
         """
         y = self.predict(x, train_flg)
 
@@ -111,18 +114,18 @@ class MultiLayerNetExtend:
         return accuracy
 
     def numerical_gradient(self, X, T):
-        """勾配を求める（数値微分）
-
+        """기울기를 구한다(수치 미분).
+        
         Parameters
         ----------
-        X : 入力データ
-        T : 教師ラベル
-
+        x : 입력 데이터
+        t : 정답 레이블
+        
         Returns
         -------
-        各層の勾配を持ったディクショナリ変数
-            grads['W1']、grads['W2']、...は各層の重み
-            grads['b1']、grads['b2']、...は各層のバイアス
+        각 층의 기울기를 담은 사전(dictionary) 변수
+            grads['W1']、grads['W2']、... 각 층의 가중치
+            grads['b1']、grads['b2']、... 각 층의 편향
         """
         loss_W = lambda W: self.loss(X, T, train_flg=True)
 
@@ -150,7 +153,7 @@ class MultiLayerNetExtend:
         for layer in layers:
             dout = layer.backward(dout)
 
-        # 設定
+        # 결과 저장
         grads = {}
         for idx in range(1, self.hidden_layer_num+2):
             grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.params['W' + str(idx)]
