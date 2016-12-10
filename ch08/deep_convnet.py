@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import pickle
 import numpy as np
 from collections import OrderedDict
@@ -8,9 +8,9 @@ from common.layers import *
 
 
 class DeepConvNet:
-    """認識率99%以上の高精度なConvNet
+    """정확도 99% 이상의 고정밀 합성곱 신경망
 
-    ネットワーク構成は下記の通り
+    네트워크 구성은 아래와 같음
         conv - relu - conv- relu - pool -
         conv - relu - conv- relu - pool -
         conv - relu - conv- relu - pool -
@@ -24,10 +24,10 @@ class DeepConvNet:
                  conv_param_5 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
                  conv_param_6 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
                  hidden_size=50, output_size=10):
-        # 重みの初期化===========
-        # 各層のニューロンひとつあたりが、前層のニューロンといくつのつながりがあるか（TODO:自動で計算する）
+        # 가중치 초기화===========
+        # 각 층의 뉴런 하나당 앞 층의 몇 개 뉴런과 연결되는가（TODO: 자동 계산되게 바꿀 것）
         pre_node_nums = np.array([1*3*3, 16*3*3, 16*3*3, 32*3*3, 32*3*3, 64*3*3, 64*4*4, hidden_size])
-        wight_init_scales = np.sqrt(2.0 / pre_node_nums)  # ReLUを使う場合に推奨される初期値
+        wight_init_scales = np.sqrt(2.0 / pre_node_nums)  # ReLU를 사용할 때의 권장 초깃값
         
         self.params = {}
         pre_channel_num = input_dim[0]
@@ -40,7 +40,7 @@ class DeepConvNet:
         self.params['W8'] = wight_init_scales[7] * np.random.randn(hidden_size, output_size)
         self.params['b8'] = np.zeros(output_size)
 
-        # レイヤの生成===========
+        # 계층 생성===========
         self.layers = []
         self.layers.append(Convolution(self.params['W1'], self.params['b1'], 
                            conv_param_1['stride'], conv_param_1['pad']))
@@ -110,7 +110,7 @@ class DeepConvNet:
         for layer in tmp_layers:
             dout = layer.backward(dout)
 
-        # 設定
+        # 결과 저장
         grads = {}
         for i, layer_idx in enumerate((0, 2, 5, 7, 10, 12, 15, 18)):
             grads['W' + str(i+1)] = self.layers[layer_idx].dW
