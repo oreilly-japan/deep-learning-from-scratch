@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import matplotlib.pyplot as plt
 from simple_convnet import SimpleConvNet
@@ -26,7 +26,7 @@ network = SimpleConvNet(input_dim=(1,28,28),
                         conv_param = {'filter_num':30, 'filter_size':5, 'pad':0, 'stride':1},
                         hidden_size=100, output_size=10, weight_init_std=0.01)
 
-# 学習後の重み
+# 학습된 가중치
 network.load_params("params.pkl")
 
 filter_show(network.params['W1'], 16)
