@@ -8,18 +8,18 @@ from common.gradient import numerical_gradient
 
 
 class MultiLayerNet:
-    """全結合による多層ニューラルネットワーク
+    """완전 연결 다층 신경망
 
     Parameters
     ----------
-    input_size : 入力サイズ（MNISTの場合は784）
-    hidden_size_list : 隠れ層のニューロンの数のリスト（e.g. [100, 100, 100]）
-    output_size : 出力サイズ（MNISTの場合は10）
-    activation : 'relu' or 'sigmoid'
-    weight_init_std : 重みの標準偏差を指定（e.g. 0.01）
-        'relu'または'he'を指定した場合は「Heの初期値」を設定
-        'sigmoid'または'xavier'を指定した場合は「Xavierの初期値」を設定
-    weight_decay_lambda : Weight Decay（L2ノルム）の強さ
+    input_size : 입력 크기（MNIST의 경우엔 784）
+    hidden_size_list : 각 은닉층의 뉴런 수를 담은 리스트（e.g. [100, 100, 100]）
+    output_size : 출력 크기（MNIST의 경우엔 10）
+    activation : 활성화 함수 - 'relu' 혹은 'sigmoid'
+    weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）
+        'relu'나 'he'로 지정하면 'He 초깃값'으로 설정
+        'sigmoid'나 'xavier'로 지정하면 'Xavier 초깃값'으로 설정
+    weight_decay_lambda : 가중치 감소(L2 법칙)의 세기
     """
     def __init__(self, input_size, hidden_size_list, output_size,
                  activation='relu', weight_init_std='relu', weight_decay_lambda=0):
@@ -30,10 +30,10 @@ class MultiLayerNet:
         self.weight_decay_lambda = weight_decay_lambda
         self.params = {}
 
-        # 重みの初期化
+        # 가중치 초기화
         self.__init_weight(weight_init_std)
 
-        # レイヤの生成
+        # 계층 생성
         activation_layer = {'sigmoid': Sigmoid, 'relu': Relu}
         self.layers = OrderedDict()
         for idx in range(1, self.hidden_layer_num+1):
@@ -48,22 +48,21 @@ class MultiLayerNet:
         self.last_layer = SoftmaxWithLoss()
 
     def __init_weight(self, weight_init_std):
-        """重みの初期値設定
+        """가중치 초깃값 생성
 
         Parameters
         ----------
-        weight_init_std : 重みの標準偏差を指定（e.g. 0.01）
-            'relu'または'he'を指定した場合は「Heの初期値」を設定
-            'sigmoid'または'xavier'を指定した場合は「Xavierの初期値」を設定
+        weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）
+            'relu'나 'he'로 지정하면 'He 초깃값'으로 설정
+            'sigmoid'나 'xavier'로 지정하면 'Xavier 초깃값'으로 설정
         """
         all_size_list = [self.input_size] + self.hidden_size_list + [self.output_size]
         for idx in range(1, len(all_size_list)):
             scale = weight_init_std
             if str(weight_init_std).lower() in ('relu', 'he'):
-                scale = np.sqrt(2.0 / all_size_list[idx - 1])  # ReLUを使う場合に推奨される初期値
+                scale = np.sqrt(2.0 / all_size_list[idx - 1])  # ReLU를 사용할 때의 권장 초깃값
             elif str(weight_init_std).lower() in ('sigmoid', 'xavier'):
-                scale = np.sqrt(1.0 / all_size_list[idx - 1])  # sigmoidを使う場合に推奨される初期値
-
+                scale = np.sqrt(1.0 / all_size_list[idx - 1])  # sigmoid를 사용할 때의 권장 초깃값
             self.params['W' + str(idx)] = scale * np.random.randn(all_size_list[idx-1], all_size_list[idx])
             self.params['b' + str(idx)] = np.zeros(all_size_list[idx])
 
@@ -74,16 +73,16 @@ class MultiLayerNet:
         return x
 
     def loss(self, x, t):
-        """損失関数を求める
-
+        """손실 함수를 구한다.
+        
         Parameters
         ----------
-        x : 入力データ
-        t : 教師ラベル
-
+        x : 입력 데이터
+        t : 정답 레이블 
+        
         Returns
         -------
-        損失関数の値
+        손실 함수의 값
         """
         y = self.predict(x)
 
@@ -103,18 +102,18 @@ class MultiLayerNet:
         return accuracy
 
     def numerical_gradient(self, x, t):
-        """勾配を求める（数値微分）
-
+        """기울기를 구한다(수치 미분).
+        
         Parameters
         ----------
-        x : 入力データ
-        t : 教師ラベル
-
+        x : 입력 데이터
+        t : 정답 레이블
+        
         Returns
         -------
-        各層の勾配を持ったディクショナリ変数
-            grads['W1']、grads['W2']、...は各層の重み
-            grads['b1']、grads['b2']、...は各層のバイアス
+        각 층의 기울기를 담은 사전(dictionary) 변수
+            grads['W1']、grads['W2']、... 각 층의 가중치
+            grads['b1']、grads['b2']、... 각 층의 편향
         """
         loss_W = lambda W: self.loss(x, t)
 
@@ -126,18 +125,18 @@ class MultiLayerNet:
         return grads
 
     def gradient(self, x, t):
-        """勾配を求める（誤差逆伝搬法）
+        """기울기를 구한다(오차역전파법).
 
         Parameters
         ----------
-        x : 入力データ
-        t : 教師ラベル
-
+        x : 입력 데이터
+        t : 정답 레이블
+        
         Returns
         -------
-        各層の勾配を持ったディクショナリ変数
-            grads['W1']、grads['W2']、...は各層の重み
-            grads['b1']、grads['b2']、...は各層のバイアス
+        각 층의 기울기를 담은 사전(dictionary) 변수
+            grads['W1']、grads['W2']、... 각 층의 가중치
+            grads['b1']、grads['b2']、... 각 층의 편향
         """
         # forward
         self.loss(x, t)
@@ -151,7 +150,7 @@ class MultiLayerNet:
         for layer in layers:
             dout = layer.backward(dout)
 
-        # 設定
+        # 결과 저장
         grads = {}
         for idx in range(1, self.hidden_layer_num+2):
             grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W
