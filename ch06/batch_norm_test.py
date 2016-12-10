@@ -56,7 +56,7 @@ def __train(weight_init_std):
     return train_acc_list, bn_train_acc_list
 
 
-# 3.그래프 그리기==========
+# 그래프 그리기==========
 weight_scale_list = np.logspace(0, -4, num=16)
 x = np.arange(max_epochs)
 
