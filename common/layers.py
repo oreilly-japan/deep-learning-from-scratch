@@ -63,15 +63,15 @@ class Affine:
         self.dW = np.dot(self.x.T, dout)
         self.db = np.sum(dout, axis=0)
         
-        dx = dx.reshape(*self.original_x_shape)  # 입력 데이터 성형(텐서 대응)
+        dx = dx.reshape(*self.original_x_shape)  # 입력 데이터 모양 변경(텐서 대응)
         return dx
 
 
 class SoftmaxWithLoss:
     def __init__(self):
-        self.loss = None # 손실
+        self.loss = None # 손실함수
         self.y = None    # softmax의 출력
-        self.t = None    # 정답 레이블(원-핫 벡터)
+        self.t = None    # 정답 레이블(원-핫 인코딩 형태)
         
     def forward(self, x, t):
         self.t = t
@@ -82,7 +82,7 @@ class SoftmaxWithLoss:
 
     def backward(self, dout=1):
         batch_size = self.t.shape[0]
-        if self.t.size == self.y.size: # 정답 레이블이 원-핫 벡터일 때
+        if self.t.size == self.y.size: # 정답 레이블이 원-핫 인코딩 형태일 때
             dx = (self.y - self.t) / batch_size
         else:
             dx = self.y.copy()
@@ -119,13 +119,13 @@ class BatchNormalization:
         self.gamma = gamma
         self.beta = beta
         self.momentum = momentum
-        self.input_shape = None # Conv層の場合は4次元、全結合層の場合は2次元  
+        self.input_shape = None # 합성곱 계층은 4차원, 완전연결 계층은 2차원  
 
-        # テスト時に使用する平均と分散
+        # 시험할 때 사용할 평균과 분산
         self.running_mean = running_mean
         self.running_var = running_var  
         
-        # backward時に使用する中間データ
+        # backward 시에 사용할 중간 데이터
         self.batch_size = None
         self.xc = None
         self.std = None
@@ -202,12 +202,12 @@ class Convolution:
         self.stride = stride
         self.pad = pad
         
-        # 中間データ（backward時に使用）
+        # 중간 데이터（backward 시 사용）
         self.x = None   
         self.col = None
         self.col_W = None
         
-        # 重み・バイアスパラメータの勾配
+        # 가중치와 편향 매개변수의 기울기
         self.dW = None
         self.db = None
 
