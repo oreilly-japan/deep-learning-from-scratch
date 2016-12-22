@@ -1,12 +1,12 @@
-# 밑바닥부터 시작하는 딥 러닝 (원서 : ゼロから作る Deep Learning)
+# 밑바닥부터 시작하는 딥러닝 (원서 : ゼロから作る Deep Learning)
 
 ---
 
-![표지](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)
+![표지](https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_deep_learning_from_scratch.jpg)
 
 ---
 
-이 저장소는 『[밑바닥부터 시작하는 딥 러닝](http://www.hanbit.co.kr/)』(한빛미디어, 2017)의 지원 사이트입니다.
+이 저장소는 『[밑바닥부터 시작하는 딥러닝](http://www.hanbit.co.kr/)』(한빛미디어, 2017)의 지원 사이트입니다.
 
 ## 파일 구성
 
