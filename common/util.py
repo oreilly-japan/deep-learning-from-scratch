@@ -37,11 +37,11 @@ def conv_output_size(input_size, filter_size, stride=1, pad=0):
 
 
 def im2col(input_data, filter_h, filter_w, stride=1, pad=0):
-    """
-
+    """다수의 이미지를 입력받아 2차원 배열로 변환한다(평탄화).
+    
     Parameters
     ----------
-    input_data : 4차원 배열(데이터 수, 채널 수, 높이, 너비) 형태의 입력 데이터
+    input_data : 4차원 배열 형태의 입력 데이터(이미지 수, 채널 수, 높이, 너비)
     filter_h : 필터의 높이
     filter_w : 필터의 너비
     stride : 스트라이드
@@ -69,12 +69,12 @@ def im2col(input_data, filter_h, filter_w, stride=1, pad=0):
 
 
 def col2im(col, input_shape, filter_h, filter_w, stride=1, pad=0):
-    """
-
+    """(im2col과 반대) 2차원 배열을 입력받아 다수의 이미지 묶음으로 변환한다.
+    
     Parameters
     ----------
-    col : 2차원 배열
-    input_shape : 입력 데이터의 형상（예：(10, 1, 28, 28)）
+    col : 2차원 배열(입력 데이터)
+    input_shape : 원래 이미지 데이터의 형상（예：(10, 1, 28, 28)）
     filter_h : 필터의 높이
     filter_w : 필터의 너비
     stride : 스트라이드
@@ -82,7 +82,7 @@ def col2im(col, input_shape, filter_h, filter_w, stride=1, pad=0):
     
     Returns
     -------
-
+    img : 변환된 이미지들
     """
     N, C, H, W = input_shape
     out_h = (H + 2*pad - filter_h)//stride + 1
