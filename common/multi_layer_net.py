@@ -8,7 +8,7 @@ from common.gradient import numerical_gradient
 
 
 class MultiLayerNet:
-    """완전 연결 다층 신경망
+    """완전연결 다층 신경망
 
     Parameters
     ----------
@@ -111,7 +111,7 @@ class MultiLayerNet:
         
         Returns
         -------
-        각 층의 기울기를 담은 사전(dictionary) 변수
+        각 층의 기울기를 담은 딕셔너리(dictionary) 변수
             grads['W1']、grads['W2']、... 각 층의 가중치
             grads['b1']、grads['b2']、... 각 층의 편향
         """
@@ -134,7 +134,7 @@ class MultiLayerNet:
         
         Returns
         -------
-        각 층의 기울기를 담은 사전(dictionary) 변수
+        각 층의 기울기를 담은 딕셔너리(dictionary) 변수
             grads['W1']、grads['W2']、... 각 층의 가중치
             grads['b1']、grads['b2']、... 각 층의 편향
         """
