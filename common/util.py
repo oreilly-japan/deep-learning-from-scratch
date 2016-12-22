@@ -3,9 +3,9 @@ import numpy as np
 
 
 def smooth_curve(x):
-    """損失関数のグラフを滑らかにするために用いる
-
-    参考：http://glowingpython.blogspot.jp/2012/02/convolution-with-numpy.html
+    """손실 함수의 그래프를 매끄럽게 하기 위해 사용
+    
+    참고：http://glowingpython.blogspot.jp/2012/02/convolution-with-numpy.html
     """
     window_len = 11
     s = np.r_[x[window_len-1:0:-1], x, x[-1:-window_len:-1]]
@@ -15,16 +15,16 @@ def smooth_curve(x):
 
 
 def shuffle_dataset(x, t):
-    """データセットのシャッフルを行う
+    """데이터셋을 뒤섞는다.
 
     Parameters
     ----------
-    x : 訓練データ
-    t : 教師データ
-
+    x : 훈련 데이터
+    t : 정답 레이블
+    
     Returns
     -------
-    x, t : シャッフルを行った訓練データと教師データ
+    x, t : 뒤섞은 훈련 데이터와 정답 레이블
     """
     permutation = np.random.permutation(x.shape[0])
     x = x[permutation,:] if x.ndim == 2 else x[permutation,:,:,:]
@@ -41,15 +41,15 @@ def im2col(input_data, filter_h, filter_w, stride=1, pad=0):
 
     Parameters
     ----------
-    input_data : (データ数, チャンネル, 高さ, 幅)の4次元配列からなる入力データ
-    filter_h : フィルターの高さ
-    filter_w : フィルターの幅
-    stride : ストライド
-    pad : パディング
-
+    input_data : 4차원 배열(데이터 수, 채널 수, 높이, 너비) 형태의 입력 데이터
+    filter_h : 필터의 높이
+    filter_w : 필터의 너비
+    stride : 스트라이드
+    pad : 패딩
+    
     Returns
     -------
-    col : 2次元配列
+    col : 2차원 배열
     """
     N, C, H, W = input_data.shape
     out_h = (H + 2*pad - filter_h)//stride + 1
@@ -73,13 +73,13 @@ def col2im(col, input_shape, filter_h, filter_w, stride=1, pad=0):
 
     Parameters
     ----------
-    col :
-    input_shape : 入力データの形状（例：(10, 1, 28, 28)）
-    filter_h :
-    filter_w
-    stride
-    pad
-
+    col : 2차원 배열
+    input_shape : 입력 데이터의 형상（예：(10, 1, 28, 28)）
+    filter_h : 필터의 높이
+    filter_w : 필터의 너비
+    stride : 스트라이드
+    pad : 패딩
+    
     Returns
     -------
 
