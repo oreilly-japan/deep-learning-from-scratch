@@ -2,7 +2,7 @@
 
 ---
 
-![표지](https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_deep_learning_from_scratch.jpg)
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="480">
 
 ---
 
@@ -50,7 +50,7 @@ $ python train_nueralnet.py
 
 ## 책의 오류
 
-이 책의 오탈자 등 오류 정보는 아래 페이지에서 확인하실 수 있습니다.
+이 책의 오탈자 등 오류 정보는 아래 페이지에서 확인하실 수 있습니다. // 확정 후 업데이트하겠습니다.
 
 ... https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
 
