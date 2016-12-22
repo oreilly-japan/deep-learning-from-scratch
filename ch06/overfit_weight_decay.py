@@ -56,7 +56,7 @@ for i in range(1000000000):
             break
 
 
-# 3.그래프 그리기==========
+# 그래프 그리기==========
 markers = {'train': 'o', 'test': 's'}
 x = np.arange(max_epochs)
 plt.plot(x, train_acc_list, marker='o', label='train', markevery=10)
