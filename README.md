@@ -55,3 +55,6 @@ $ python train_nueralnet.py
 ... https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
 
 이 페이지에 등록되지 않은 오류는 ... 로 알려주시기 바랍니다.
+
+## 인공지능/딥러닝 관련 도서 로드맵
+[개앞맵시] 스카이넷도 딥러닝부터 : https://www.mindmeister.com/812276967/_
