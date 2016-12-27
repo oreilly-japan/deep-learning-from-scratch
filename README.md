@@ -9,8 +9,7 @@
 이 저장소는 『[밑바닥부터 시작하는 딥러닝](http://www.hanbit.co.kr/)』(한빛미디어, 2017)의 지원 사이트입니다.
 
 ## 책 미리보기
-issuu : https://goo.gl/L2LzRa
-slideshare : http://www.slideshare.net/wegra/ss-70456623
+[issuu](https://issuu.com/hanbit.co.kr/docs/____________________________________38d0e6451f0ddf) | [SlideShare](http://www.slideshare.net/wegra/ss-70456623)
 
 ## 파일 구성
 
