@@ -60,4 +60,4 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 
 ## 인공지능/딥러닝 관련 도서 로드맵
 [개앞맵시] 스카이넷도 딥러닝부터 : https://www.mindmeister.com/812276967/_
-<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/map.png" width="720">
+<a href="https://www.mindmeister.com/812276967/_"><img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/map.png" width="720"></a>
