@@ -53,11 +53,11 @@ $ python train_nueralnet.py
 
 ## 책의 오류
 
-이 책의 오탈자 등 오류 정보는 아래 페이지에서 확인하실 수 있습니다. // 확정 후 업데이트하겠습니다.
+이 책의 오탈자 등 오류 정보는 아래 페이지에서 확인하실 수 있습니다.
 
-... https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
+http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 
-이 페이지에 등록되지 않은 오류는 ... 로 알려주시기 바랍니다.
 
 ## 인공지능/딥러닝 관련 도서 로드맵
 [개앞맵시] 스카이넷도 딥러닝부터 : https://www.mindmeister.com/812276967/_
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/map.png" width="720">
