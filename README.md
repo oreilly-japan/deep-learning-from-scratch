@@ -1,4 +1,4 @@
-# 밑바닥부터 시작하는 딥러닝 (원서 : ゼロから作る Deep Learning)
+# 『밑바닥부터 시작하는 딥러닝』 (원서 : ゼロから作る Deep Learning)
 
 ---
 
@@ -6,7 +6,7 @@
 
 ---
 
-이 저장소는 『[밑바닥부터 시작하는 딥러닝](http://www.hanbit.co.kr/)』(한빛미디어, 2017)의 지원 사이트입니다.
+이 저장소는 『[밑바닥부터 시작하는 딥러닝](http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198)』(한빛미디어, 2017)의 지원 사이트입니다.
 
 ## 책 미리보기
 [issuu](https://issuu.com/hanbit.co.kr/docs/____________________________________38d0e6451f0ddf) | [SlideShare](http://www.slideshare.net/wegra/ss-70456623) | [Yumpu](https://www.yumpu.com/xx/document/view/56594155/-)
