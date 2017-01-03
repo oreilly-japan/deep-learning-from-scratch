@@ -61,3 +61,7 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 ## 인공지능/딥러닝 관련 도서 로드맵
 [개앞맵시] 스카이넷도 딥러닝부터 : https://www.mindmeister.com/812276967/_
 <a href="https://www.mindmeister.com/812276967/_"><img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/map.png" width="720"></a>
+
+## 머신러닝/딥러닝 번역 용어표
+
+이 책을 번역하며 정리한 [용어표](https://docs.google.com/spreadsheets/d/1ccwGiC01X-gs3PPcXPUz67W9rS6l994LD4AL18KF1_0)입니다.
