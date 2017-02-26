@@ -2,11 +2,16 @@
 
 ---
 
-<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="480">
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="360">
 
 ---
 
 이 저장소는 『[밑바닥부터 시작하는 딥러닝](http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198)』(한빛미디어, 2017)의 지원 사이트입니다.
+
+## 새소식
+**2017.02.26** - 각 챕터 디렉터리에 README.md 파일을 추가했습니다. 각 파일의 '용도', '관련 절', '등장 페이지'를 명기했고, 책에서 각 장의 '도입부', '목차', '이번 장에서 배운 내용'을 발췌해서 책이 없어도 큰 그림을 파악할 수 있도록 했습니다.
+
+차차 파일 안의 소스 코드에도 친절한 설명을 덧붙이도록 하겠습니다.
 
 ## 책 미리보기
 [issuu](https://issuu.com/hanbit.co.kr/docs/____________________________________38d0e6451f0ddf) | [SlideShare](http://www.slideshare.net/wegra/ss-70456623) | [Yumpu](https://www.yumpu.com/xx/document/view/56594155/-)
