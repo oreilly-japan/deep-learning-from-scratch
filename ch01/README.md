@@ -85,14 +85,14 @@ matplotlib은 그래프를 그려주는 라이브러리입니다. matplotlib을 
 ### 1.3 파이썬 인터프리터
 파이썬을 설치했다면 파이썬 버전을 먼저 확인합니다. 터미널에서 python --version 명령어를 실행해보세요. 이 명령은 설치된 파이썬의 버전을 출력합니다.
 
-```python
+```
 $ python --version
 Python 3.5.2 :: Anaconda 4.2.0 (x86 _64)
 ```
 
 이처럼 “Python 3.x.x”라 표시되면 파이썬 3가 제대로 설치된 것입니다(설치한 버전에 따라 숫자는 달라지겠죠?). 이어서 python이라고 입력하여 파이썬 인터프리터를 시작해보세요.
 
-```python
+```
 $ python
 Python 3.5.2 |Anaconda 4.2.0 (x86 _64)| (default, Jul 2 2016, 17:52:12)
 [GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)] on darwin
@@ -296,7 +296,7 @@ print("I'm hungry!")
 
 이어서 터미널을 열고 앞의 hungry.py를 저장한 디렉터리로 이동합니다. 그런 다음 파일 이름인 “hungry.py”를 인수로 python 명령을 실행합니다. 여기에서는 hungry.py가 ~/deep-learning-from-scratch/ch01 디렉터리에 있다고 가정합니다.
 
-```python
+```
 $ cd ~/deep-learning-from-scratch/ch01 # 디렉터리로 이동
 $ python hungry.py
 I'm hungry!
@@ -342,7 +342,7 @@ m.goodbye()
 
 이제 터미널에서 man.py를 실행합니다.
 
-```python
+```
 $ python man.py
 Initialized!
 Hello David!
