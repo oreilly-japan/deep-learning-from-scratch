@@ -7,12 +7,14 @@
 
 **처음 시작하시는 분**은 별다른 추가 작업 없이 깃허브 소스 폴더 전체를 내려받으시면 예제를 실행해보실 수 있으며,
 
-**이미 작업하시던 분 중 데이터셋을 아직 내려받지 않으신 분**은 /dataset/ 디렉터리에 있는 아래의 4개 파일을 내려받아 각자의 <예제 소스 디렉터리>/dataset/ 디렉터리로 옮겨놓으시면 됩니다.
+**이미 작업하시던 분 중 데이터셋을 아직 내려받지 않으신 분**은 /dataset/ 디렉터리에 있는 아래의 4개 파일을 내려받아 각자의 <예제 소스 홈>/dataset/ 디렉터리로 옮겨놓으시면 됩니다.
 
 * [t10k-images-idx3-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/t10k-images-idx3-ubyte.gz)
 * [t10k-labels-idx1-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/t10k-labels-idx1-ubyte.gz)
 * [train-images-idx3-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/train-images-idx3-ubyte.gz)
 * [train-labels-idx1-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/train-labels-idx1-ubyte.gz)
+
+★ 간단히, 위의 파일 4개를 각자의 <예제 소스 홈>/dataset/ 디렉터리 밑에 복사해두면 됩니다. ^__^
 
 ---
 
