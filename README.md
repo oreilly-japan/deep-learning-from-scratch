@@ -2,6 +2,20 @@
 
 ---
 
+:red_circle: **[긴급 공지!!]** 2017년 3월 21일 현재, 실습용 손글씨 데이터셋 다운로드 사이트( http://yann.lecun.com/exdb/mnist/ )가 연결되지 않습니다.
+그래서 예제 수행에 필요한 데이터셋 파일을 임시로 /dataset/ 디렉터리에 올려뒀습니다.
+
+**처음 시작하시는 분**은 별다른 추가 작업 없이 깃허브 소스 폴더 전체를 내려받으시면 예제를 실행해보실 수 있으며,
+
+**이미 작업하시던 분 중 데이터셋을 아직 내려받지 않으신 분**은 /dataset/ 디렉터리에 있는 아래의 4개 파일을 내려받아 각자의 <예제 소스 디렉터리>/dataset/ 디렉터리로 옮겨놓으시면 됩니다.
+
+* [t10k-images-idx3-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/t10k-images-idx3-ubyte.gz)
+* [t10k-labels-idx1-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/t10k-labels-idx1-ubyte.gz)
+* [train-images-idx3-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/train-images-idx3-ubyte.gz)
+* [train-labels-idx1-ubyte.gz](https://github.com/WegraLee/deep-learning-from-scratch/raw/master/dataset/train-labels-idx1-ubyte.gz)
+
+---
+
 <img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="360">
 
 ---
