@@ -1,6 +1,7 @@
 # coding: utf-8
 import os
 import sys
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # どこでも実行できるようにする
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist

@@ -1,5 +1,6 @@
 # coding: utf-8
 import sys, os
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # どこでも実行できるようにする
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import pickle
 import numpy as np
