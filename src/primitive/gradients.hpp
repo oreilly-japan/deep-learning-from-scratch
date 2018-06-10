@@ -7,15 +7,13 @@
 
 #include <unoredered_map>
 
-namespace entity {
-    template<typename K, typename V>
-    class Parameters {
-        V &operator[](const K &key) {
-            return mp[key];
-        }
+namespace primitive {
+  template <typename K, typename V>
+  class Parameters {
+    V &operator[](const K &key) { return mp[key]; }
 
-        std::unordered_map <K, V> mp;
-    };
-}
+    std::unordered_map<K, V> mp;
+  };
+}  // namespace primitive
 
-#endif //DEEP_LEARNING_FROM_SCRATCH_GRADIENTS_HPP
+#endif  // DEEP_LEARNING_FROM_SCRATCH_GRADIENTS_HPP

@@ -5,7 +5,7 @@
 #ifndef DEEP_LEARNING_FROM_SCRATCH_OPTIMIZER_HPP
 #define DEEP_LEARNING_FROM_SCRATCH_OPTIMIZER_HPP
 
-namespace entity {
+namespace optimizer {
     class Optimizer {
         Optimizer( int lr );
         virtual update();

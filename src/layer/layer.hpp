@@ -5,13 +5,14 @@
 #ifndef DEEP_LEARNING_FROM_SCRATCH_LAYER_HPP
 #define DEEP_LEARNING_FROM_SCRATCH_LAYER_HPP
 
-#include "util.hpp"
+#include "../util.hpp"
 
-namespace entity {
-        class Layer {
-            virtual forward(std::vector<tensor_t> &in);
-            virtual back
-        };
-};
+namespace layer {
+  class Layer {
+    virtual forward(const ndarray& input, std::shared_ptr<ndarray> output) = 0;
 
-#endif //DEEP_LEARNING_FROM_SCRATCH_LAYER_HPP
+    virtual backward(const ndarray& dout, std::shared_ptr<ndarray> dx) = 0;
+  };
+};  // namespace layer
+
+#endif  // DEEP_LEARNING_FROM_SCRATCH_LAYER_HPP

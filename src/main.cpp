@@ -3,7 +3,9 @@
 //
 
 #include <iostream>
+#include "primitive/ndarray.hpp"
 
 int main() {
-    std::cout << "boot :: deep learning lib" << std::endl;
+  primitive::ndarray nd;
+  std::cout << "boot :: deep learning lib" << std::endl;
 }
