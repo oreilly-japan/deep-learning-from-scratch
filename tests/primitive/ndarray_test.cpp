@@ -2,7 +2,11 @@
 // Created by TakumiYamashita on 2018/06/10.
 //
 
-#include <gtest/gtest.hpp>
-#include "../../src/primitive/primitive.hpp"
+#include <iostream>
 
-TEST()
+#include <gtest/gtest.h>
+#include "../src/primitive/primitive.hpp"
+
+TEST(NDARRAY_TEST, NO_ERROR) {
+  std::cout << "passed" << std::endl;
+}
