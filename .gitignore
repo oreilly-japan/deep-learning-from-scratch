@@ -18,3 +18,6 @@ build/
 CMakeFiles/
 CMakeCache.txt
 *cache*
+
+# external
+external/
