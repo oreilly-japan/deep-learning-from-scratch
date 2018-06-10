@@ -16,4 +16,5 @@ build/
 
 # cmake
 CMakeFiles/
+CMakeCache.txt
 *cache*
