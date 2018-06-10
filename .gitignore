@@ -3,3 +3,10 @@
 *.gz
 *.pyc
 __pycache__/
+
+
+# cpp
+build/
+
+# idea
+.idea/
