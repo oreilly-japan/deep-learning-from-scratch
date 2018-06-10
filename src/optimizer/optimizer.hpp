@@ -7,7 +7,6 @@
 
 namespace optimizer {
     class Optimizer {
-        Optimizer( int lr );
         virtual update();
     };
 }

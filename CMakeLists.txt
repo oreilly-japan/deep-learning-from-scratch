@@ -6,4 +6,9 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -s -DNDEBUG -march=native")
 set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-g3 -Og -pg")
 set(CMAKE_CXX_FLAGS_MINSIZEREL "-Os -s -DNDEBUG -march=native")
 
+
+include_directories(
+        ${PROJECT_SOURCE_DIR}/src
+)
+
 add_subdirectory(src)

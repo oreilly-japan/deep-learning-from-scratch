@@ -5,14 +5,15 @@
 #ifndef DEEP_LEARNING_FROM_SCRATCH_PARAMETERS_HPP
 #define DEEP_LEARNING_FROM_SCRATCH_PARAMETERS_HPP
 
-#include <unoredered_map>
+#include <unordered_map>
+#include "primitive.hpp"
 
 namespace primitive {
-  template <typename K, typename V>
+  template <typename K>
   class Parameters {
-    V &operator[](const K &key) { return mp[key]; }
+    std::shared_ptr<ndarray> operator[](const K &key) { return mp[key]; }
 
-    std::unordered_map<K, V> mp;
+    std::unordered_map<K, std::shared_ptr<ndarray>> mp;
   };
 }  // namespace primitive
 
