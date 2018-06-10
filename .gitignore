@@ -13,3 +13,7 @@ build/
 
 # output file
 *.pkl
+
+# cmake
+CMakeFiles/
+*cache*
