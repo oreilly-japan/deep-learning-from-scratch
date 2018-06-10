@@ -88,7 +88,3 @@ set_target_properties(gmock PROPERTIES
         INTERFACE_LINK_LIBRARIES "pthread;${gmock_MAIN_LIBRARY}"
         IMPORTED_LOCATION ${gmock_LIBRARY}
         )
-
-include_directories(
-
-)
