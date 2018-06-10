@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "primitive/ndarray.hpp"
+#include "trainer/trainer.h"
 
 int main() {
   primitive::ndarray nd;

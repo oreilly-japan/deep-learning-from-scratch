@@ -7,5 +7,6 @@
 
 #include "primitive/ndarray.hpp"
 #include "primitive/parameters.hpp"
+#include <memory>
 
 #endif //DEEP_LEARNING_FROM_SCRATCH_PRIMITIVE_HPP

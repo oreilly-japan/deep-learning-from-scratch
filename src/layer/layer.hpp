@@ -9,9 +9,8 @@
 
 namespace layer {
   class Layer {
-    virtual forward(const ndarray& input, std::shared_ptr<ndarray> output) = 0;
-
-    virtual backward(const ndarray& dout, std::shared_ptr<ndarray> dx) = 0;
+    virtual void forward(const ndarray& input, std::shared_ptr<ndarray> output) = 0;
+    virtual void backward(const ndarray& dout, std::shared_ptr<ndarray> dx) = 0;
   };
 };  // namespace layer
 
