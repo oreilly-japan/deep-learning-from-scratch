@@ -70,9 +70,9 @@ class TwoLayerNet:
         grads['W2'] = np.dot(z1.T, dy)
         grads['b2'] = np.sum(dy, axis=0)
         
-        da1 = np.dot(dy, W2.T)
-        dz1 = sigmoid_grad(a1) * da1
-        grads['W1'] = np.dot(x.T, dz1)
-        grads['b1'] = np.sum(dz1, axis=0)
+        dz1 = np.dot(dy, W2.T)
+        da1 = sigmoid_grad(a1) * dz1
+        grads['W1'] = np.dot(x.T, da1)
+        grads['b1'] = np.sum(da1, axis=0)
 
         return grads
