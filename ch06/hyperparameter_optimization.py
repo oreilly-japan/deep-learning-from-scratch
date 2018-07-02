@@ -16,7 +16,7 @@ t_train = t_train[:500]
 
 # 検証データの分離
 validation_rate = 0.20
-validation_num = x_train.shape[0] * validation_rate
+validation_num = int(x_train.shape[0] * validation_rate)
 x_train, t_train = shuffle_dataset(x_train, t_train)
 x_val = x_train[:validation_num]
 t_val = t_train[:validation_num]
