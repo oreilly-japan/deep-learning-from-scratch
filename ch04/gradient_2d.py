@@ -6,19 +6,19 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 def _numerical_gradient_no_batch(f, x):
-    h = 1e-4 # 0.0001
+    h = 1e-4  # 0.0001
     grad = np.zeros_like(x)
     
     for idx in range(x.size):
         tmp_val = x[idx]
         x[idx] = float(tmp_val) + h
-        fxh1 = f(x) # f(x+h)
+        fxh1 = f(x)  # f(x+h)
         
         x[idx] = tmp_val - h 
-        fxh2 = f(x) # f(x-h)
+        fxh2 = f(x)  # f(x-h)
         grad[idx] = (fxh1 - fxh2) / (2*h)
         
-        x[idx] = tmp_val # 値を元に戻す
+        x[idx] = tmp_val  # 値を元に戻す
         
     return grad
 
@@ -47,7 +47,8 @@ def tangent_line(f, x):
     print(d)
     y = f(x) - d*x
     return lambda t: d*t + y
-     
+
+
 if __name__ == '__main__':
     x0 = np.arange(-2, 2.5, 0.25)
     x1 = np.arange(-2, 2.5, 0.25)
@@ -56,10 +57,10 @@ if __name__ == '__main__':
     X = X.flatten()
     Y = Y.flatten()
     
-    grad = numerical_gradient(function_2, np.array([X, Y]) )
+    grad = numerical_gradient(function_2, np.array([X, Y]))
     
     plt.figure()
-    plt.quiver(X, Y, -grad[0], -grad[1],  angles="xy",color="#666666")#,headwidth=10,scale=40,color="#444444")
+    plt.quiver(X, Y, -grad[0], -grad[1],  angles="xy",color="#666666")
     plt.xlim([-2, 2])
     plt.ylim([-2, 2])
     plt.xlabel('x0')
