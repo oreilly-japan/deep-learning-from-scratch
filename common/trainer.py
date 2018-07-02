@@ -21,7 +21,7 @@ class Trainer:
         self.batch_size = mini_batch_size
         self.evaluate_sample_num_per_epoch = evaluate_sample_num_per_epoch
 
-        # optimzer
+        # optimizer
         optimizer_class_dict = {'sgd':SGD, 'momentum':Momentum, 'nesterov':Nesterov,
                                 'adagrad':AdaGrad, 'rmsprpo':RMSprop, 'adam':Adam}
         self.optimizer = optimizer_class_dict[optimizer.lower()](**optimizer_param)

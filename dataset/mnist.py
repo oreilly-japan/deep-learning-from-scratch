@@ -79,7 +79,7 @@ def init_mnist():
         pickle.dump(dataset, f, -1)
     print("Done!")
 
-def _change_ont_hot_label(X):
+def _change_one_hot_label(X):
     T = np.zeros((X.size, 10))
     for idx, row in enumerate(T):
         row[X[idx]] = 1
