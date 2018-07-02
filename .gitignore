@@ -3,3 +3,21 @@
 *.gz
 *.pyc
 __pycache__/
+
+
+# cpp
+build/
+
+# idea
+.idea/
+
+# output file
+*.pkl
+
+# cmake
+CMakeFiles/
+CMakeCache.txt
+*cache*
+
+# external
+external/
