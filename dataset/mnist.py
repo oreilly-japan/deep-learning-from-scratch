@@ -114,8 +114,8 @@ def load_mnist(normalize=True, flatten=True, one_hot_label=False):
             dataset[key] /= 255.0
 
     if one_hot_label:
-        dataset['train_label'] = _change_ont_hot_label(dataset['train_label'])
-        dataset['test_label'] = _change_ont_hot_label(dataset['test_label'])
+        dataset['train_label'] = _change_one_hot_label(dataset['train_label'])
+        dataset['test_label'] = _change_one_hot_label(dataset['test_label'])
 
     if not flatten:
          for key in ('train_img', 'test_img'):
