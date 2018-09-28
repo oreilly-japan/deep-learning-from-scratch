@@ -1,12 +1,10 @@
 # ゼロから作る Deep Learning
+==========================
 
----
+本リポジトリはオライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』のサポートサイトです。ソースコードの解説は、本書籍をご覧ください。
 
-![表紙](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)
+[![book](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)](http://www.oreilly.co.jp/books/9784873117584/)
 
----
-
-本リポジトリはオライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』のサポートサイトです。
 
 ## ファイル構成
 
@@ -22,8 +20,8 @@
 
 ソースコードの解説は本書籍をご覧ください。
 
-## 必要条件
-ソースコードを実行するには、下記のソフトウェアがインストールされている必要があります。
+## Pythonと外部ライブラリ
+ソースコードを実行するには、下記のソフトウェアが必要です。
 
 * Python 3.x
 * NumPy
