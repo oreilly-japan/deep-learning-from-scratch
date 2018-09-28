@@ -1,7 +1,7 @@
 ゼロから作る Deep Learning
 ==========================
 
-本リポジトリはオライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』のサポートサイトです。ソースコードの解説は、本書籍をご覧ください。
+本リポジトリは、オライリー・ジャパン発行書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』のサポートサイトです。
 
 [![book](https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png)](http://www.oreilly.co.jp/books/9784873117584/)
 
