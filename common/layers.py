@@ -51,7 +51,7 @@ class Affine:
     def forward(self, x):
         # テンソル対応
         self.original_x_shape = x.shape
-        x = x.reshape(x.shape[0], -1)
+        x = x.reshape(-1, x.shape[-1])
         self.x = x
 
         out = np.dot(self.x, self.W) + self.b
