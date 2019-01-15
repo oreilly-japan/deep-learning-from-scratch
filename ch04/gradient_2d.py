@@ -66,6 +66,5 @@ if __name__ == '__main__':
     plt.xlabel('x0')
     plt.ylabel('x1')
     plt.grid()
-    plt.legend()
     plt.draw()
     plt.show()
