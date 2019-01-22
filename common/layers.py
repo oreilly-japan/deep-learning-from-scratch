@@ -244,12 +244,11 @@ class Convolution:
 
 
 class Pooling:
-    def __init__(self, pool_h, pool_w, stride=1, pad=0):
+    def __init__(self, pool_h, pool_w, stride=1):
         self.pool_h = pool_h
         self.pool_w = pool_w
         self.stride = stride
-        self.pad = pad
-        
+
         self.x = None
         self.arg_max = None
 
@@ -258,7 +257,7 @@ class Pooling:
         out_h = int(1 + (H - self.pool_h) / self.stride)
         out_w = int(1 + (W - self.pool_w) / self.stride)
 
-        col = im2col(x, self.pool_h, self.pool_w, self.stride, self.pad)
+        col = im2col(x, self.pool_h, self.pool_w, self.stride, 0)
         col = col.reshape(-1, self.pool_h*self.pool_w)
 
         arg_max = np.argmax(col, axis=1)
@@ -279,6 +278,6 @@ class Pooling:
         dmax = dmax.reshape(dout.shape + (pool_size,)) 
         
         dcol = dmax.reshape(dmax.shape[0] * dmax.shape[1] * dmax.shape[2], -1)
-        dx = col2im(dcol, self.x.shape, self.pool_h, self.pool_w, self.stride, self.pad)
-        
+        dx = col2im(dcol, self.x.shape, self.pool_h, self.pool_w, self.stride, 0)
+
         return dx
