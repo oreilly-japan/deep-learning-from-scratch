@@ -1,6 +1,6 @@
 # 『밑바닥부터 시작하는 딥러닝』 (원서 : ゼロから作る Deep Learning)
 
-<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/1_vs_2.png" width="480" align="right">
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/1_vs_2.png" width="500" align="right">
 <img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="320">
 
 ---
