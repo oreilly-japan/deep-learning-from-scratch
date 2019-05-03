@@ -1,6 +1,7 @@
 # 『밑바닥부터 시작하는 딥러닝』 (원서 : ゼロから作る Deep Learning)
 
-<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="360">
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/1_vs_2.png" width="480" align="right">
+<img src="https://github.com/WegraLee/deep-learning-from-scratch/blob/master/cover_image.jpg" width="320">
 
 ---
 
@@ -19,6 +20,8 @@
 ---
 
 ## 새소식
+:white_check_mark: **2019.05.01** - <밑바닥부터 시작하는 딥러닝 ❷>가 출간되었습니다. 차이점은 오른쪽 위 비교 그림을 참고하세요.
+
 :white_check_mark: **2017.04.03** - 책 본문의 수식과 그림 파일들을 모아 공유합니다. 스터디 자료 등을 만드실 때 필요하면 활용하세요.
 
 * [equations_and_figures.zip](https://github.com/WegraLee/deep-learning-from-scratch/blob/master/equations_and_figures.zip?raw=true)
