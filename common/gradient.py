@@ -39,7 +39,7 @@ def numerical_gradient(f, x):
     while not it.finished:
         idx = it.multi_index
         tmp_val = x[idx]
-        x[idx] = float(tmp_val) + h
+        x[idx] = tmp_val + h
         fxh1 = f(x) # f(x+h)
         
         x[idx] = tmp_val - h 
