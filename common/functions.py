@@ -39,7 +39,7 @@ def softmax(x):
     return np.exp(x) / np.sum(np.exp(x))
 
 
-def mean_squared_error(y, t):
+def sum_squared_error(y, t):
     return 0.5 * np.sum((y-t)**2)
 
 
