@@ -102,21 +102,21 @@ class MultiLayerNetExtend:
 
         return self.last_layer.forward(y, t) + weight_decay
 
-    def accuracy(self, X, T):
-        Y = self.predict(X, train_flg=False)
-        Y = np.argmax(Y, axis=1)
-        if T.ndim != 1 : T = np.argmax(T, axis=1)
+    def accuracy(self, x, t):
+        y = self.predict(x, train_flg=False)
+        y = np.argmax(y, axis=1)
+        if t.ndim != 1 : t = np.argmax(t, axis=1)
 
-        accuracy = np.sum(Y == T) / float(X.shape[0])
+        accuracy = np.sum(y == t) / float(x.shape[0])
         return accuracy
 
-    def numerical_gradient(self, X, T):
+    def numerical_gradient(self, x, t):
         """勾配を求める（数値微分）
 
         Parameters
         ----------
-        X : 入力データ
-        T : 教師ラベル
+        x : 入力データ
+        t : 教師ラベル
 
         Returns
         -------
@@ -124,7 +124,7 @@ class MultiLayerNetExtend:
             grads['W1']、grads['W2']、...は各層の重み
             grads['b1']、grads['b2']、...は各層のバイアス
         """
-        loss_W = lambda W: self.loss(X, T, train_flg=True)
+        loss_W = lambda W: self.loss(x, t, train_flg=True)
 
         grads = {}
         for idx in range(1, self.hidden_layer_num+2):
