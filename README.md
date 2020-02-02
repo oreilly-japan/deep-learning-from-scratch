@@ -20,6 +20,8 @@
 ---
 
 ## 새소식
+:white_check_mark: **2020.02.03** - 1.6.3절의 예시 이미지를 교체했습니다. 기존 이미지는 외설성 논란이 있어 왔고, 최근 이 이미지 사용을 중지하자는 움직임이 본격화되었습니다([Nautre Nanotech](https://www.nature.com/articles/s41565-018-0337-2), [Losing Lena](https://www.losinglena.com/)). 저와 출판사도 이 취지에 공감하여 이미지를 교체하기로 했습니다. 본 깃허브에는 이미 반영되었고, 책에는 12쇄부터 반영할 계획입니다.
+
 :white_check_mark: **2019.05.01** - 『밑바닥부터 시작하는 딥러닝 ❷』가 출간되었습니다. 차이점은 오른쪽 위 비교 그림을 참고하세요. 깃허브 주소는 아래와 같습니다.
 
 * [『밑바닥부터 시작하는 딥러닝 ❷』 깃허브](https://github.com/WegraLee/deep-learning-from-scratch-2)
