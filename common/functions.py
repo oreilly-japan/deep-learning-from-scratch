@@ -23,7 +23,7 @@ def relu(x):
 
 
 def relu_grad(x):
-    grad = np.zeros(x)
+    grad = np.zeros_like(x)
     grad[x>=0] = 1
     return grad
     
