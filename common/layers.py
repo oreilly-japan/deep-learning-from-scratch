@@ -244,7 +244,7 @@ class Convolution:
 
 
 class Pooling:
-    def __init__(self, pool_h, pool_w, stride=1, pad=0):
+    def __init__(self, pool_h, pool_w, stride=2, pad=0):
         self.pool_h = pool_h
         self.pool_w = pool_w
         self.stride = stride
