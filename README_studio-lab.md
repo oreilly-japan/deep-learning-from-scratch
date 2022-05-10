@@ -1,12 +1,13 @@
 # ゼロから作る Deep Learning
 
-[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/stockmarkteam/bert-book/blob/master/Chapter4.ipynb)
 
 ## Amazon SageMaker Studio Lab の使い方
 
-[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)は無料の機械学習環境です。事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)を行うと、JupyterLabの実行環境が利用可能です。
+[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)は無料の機械学習環境です。事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)を行うと、JupyterLabの実行環境が利用可能です。[Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp)に最新情報が取得できます。
 
 ![SageMaker Studio のランディングページ](https://docs.aws.amazon.com/sagemaker/latest/dg/images/studio-lab-landing.png)
+
+
 
 ### Amazon SageMaker Studio Labを開始する
 Studio Lab を利用開始するためには、アカウントのリクエストと作成が必要です。アカウントのリクエストはこのように行います。
