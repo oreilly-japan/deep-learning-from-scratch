@@ -1,4 +1,4 @@
-# 「BERTによる自然言語処理入門: Transformersを使った実践プログラミング」
+# ゼロから作る Deep Learning
 
 [![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/stockmarkteam/bert-book/blob/master/Chapter4.ipynb)
 
