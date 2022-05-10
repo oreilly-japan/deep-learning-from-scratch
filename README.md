@@ -43,6 +43,20 @@ $ cd ../ch05
 $ python train_nueralnet.py
 ```
 
+##　クラウドに実行
+本書のコードは次の表にあるボタンをクリックすることで、AWSの無料の計算環境である[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)上に実行できます(事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)が必要です)。SageMaker Studio Labの使い方は[こちら](./README_studio-lab.md)をご覧ください。
+
+|フォルダ名 |Amazon SageMaker Studio Lab
+|:--        |:--                          |
+|ch01       |https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch-4/tree/master/ch01　|
+|ch02       |2章で使用するソースコード    |
+|...        |...                          |
+|ch08       |8章で使用するソースコード    |
+|common     |共通で使用するソースコード   |
+|dataset    |データセット用のソースコード |
+
+
+
 ## ライセンス
 
 本リポジトリのソースコードは[MITライセンス](http://www.opensource.org/licenses/MIT)です。
