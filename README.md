@@ -49,7 +49,7 @@ $ python train_nueralnet.py
 
 |フォルダ名 |Amazon SageMaker Studio Lab
 |:--        |:--                          |
-|ch01       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch-4/tree/master/ch01)|
+|ch01       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/fififei/deep-learning-from-scratch/blob/add_studio_lab/notebooks/ch01.ipynb)|
 |ch02       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch-4/tree/master/ch02)|
 |ch03        |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch-4/tree/master/ch03)|                         
 |ch04       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch-4/tree/master/ch04)||
