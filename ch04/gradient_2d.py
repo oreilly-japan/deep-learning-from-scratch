@@ -45,8 +45,8 @@ def function_2(x):
 def tangent_line(f, x):
     d = numerical_gradient(f, x)
     print(d)
-    y = f(x) - d*x
-    return lambda t: d*t + y
+    y = f(x) - np.dot(x, d)
+    return lambda t: np.dot(t, d) + y
 
 
 if __name__ == '__main__':
