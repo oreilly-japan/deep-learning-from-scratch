@@ -1,19 +1,17 @@
 # ゼロから作る Deep Learning
 
 
-## Amazon SageMaker Studio Lab の使い方
+# Amazon SageMaker Studio Lab の使い方
 
-[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)は無料の機械学習環境です。事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)を行うと、JupyterLabの実行環境が利用可能です。[Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp)に最新情報が取得できます。
+[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)は無料の機械学習環境です。事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)を行うと、JupyterLabの実行環境が利用可能です。
 
 ![SageMaker Studio のランディングページ](https://docs.aws.amazon.com/sagemaker/latest/dg/images/studio-lab-landing.png)
 
-
-
-### Amazon SageMaker Studio Labを開始する
+## Amazon SageMaker Studio Labを開始する
 Studio Lab を利用開始するためには、アカウントのリクエストと作成が必要です。アカウントのリクエストはこのように行います。
 
 1. [Studio Lab のランディングページ](https://studiolab.sagemaker.aws/) を開きます。
-1. "Request free account" を選択します。
+1. ["Request free account"](https://studiolab.sagemaker.aws/requestAccount) を選択します。
 1. メールアドレスなど必要な情報を記入します。
 1. "Submit request" ボタンを押します。
 1. メールアドレス確認のためのEメールを受け取ったら、案内に従って設定を完了してください。
@@ -31,32 +29,19 @@ Studio Lab へのサインインは、
 1. Eメールアドレス、パスワード、ユーザー名を入力します。
 1. "Sign in" を選択しプロジェクトのページを開きます。
 
-### GPUを使用する
-Studio Lab では4時間の compute time のあいだ GPU インスタンスを連続して利用することができます。なお、15 GB のストレージが割り当てられるので、ダウンロードしたデータや実行したコード、保存したファイルなどは、後のサインイン時に引き続き利用することができます。コンピュートインスタンスの詳細は[ドキュメント (英語)](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-overview.html#studio-lab-overview-project-compute) をご覧下さい。
+## CPU/GPUを使用する
+Studio Lab では12時間のcompute timeのあいだ CPU インスタンス、4時間の compute time のあいだ GPU インスタンスを連続して利用することができます。なお、15 GB のストレージが割り当てられるので、ダウンロードしたデータや実行したコード、保存したファイルなどは、後のサインイン時に引き続き利用することができます。コンピュートインスタンスの詳細は[ドキュメント (英語)](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-overview.html#studio-lab-overview-project-compute) をご覧下さい。
 1. Studio Lab にサインインしたら、このようなプロジェクトページが表示されます。
-1. "My Project" 以下の "Select compute type" から `GPU` を選択します。
+1. "My Project" 以下の "Select compute type" から `CPU`か`GPU` を選択します。
 1. "Start runtime" を押します。
 1. ランタイムが開始したら "Open project" をクリックし JupyterLab 環境を開きます。
 
 ![Studio Lab Project](https://docs.aws.amazon.com/sagemaker/latest/dg/images/studio-lab-overview.png)
 
-### コードを実行する
+## コードを実行する
 Studio Lab では JupyterLab のインターフェイスを拡張した UI が提供されています。JupyterLab の UI になじみのない方は [The JupyterLab Interface](https://jupyterlab.readthedocs.io/en/latest/user/interface.html) のページをご覧ください。
 
 ![SageMaker Studio UI](https://docs.aws.amazon.com/sagemaker/latest/dg/images/studio-lab-ui.png)
 
-[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/stockmarkteam/bert-book/blob/master/Chapter4.ipynb)
-
-こちらのボタンから Studio Lab で本書の Notebook を開くことができます。"Copy to project" を押し、JupyterLab に遷移した後に "Clone Entier Repo" を選択すると、この GitHub リポジトリ全体をクローンすることができます。
-なお、いずれかのNotebookの冒頭で 
-```Python
-!pip install torch==1.9 matplotlib pandas 
-``` 
-によりライブラリの追加インストールを行なってください。ここで、PyTorch は Studio Lab でサポートされている 1.9 を利用しました。Studio Lab の環境とカスタマイズについてはこちらの[ドキュメント (英語)](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-use-manage.html) をご覧下さい。
-
-### 外部ストレージ (Amazon S3) や Amazon SageMaker Studio の利用
+## 外部ストレージ (Amazon S3) や Amazon SageMaker Studio の利用
 Studio Lab の project に割り当てられた 15 GB のストレージを超えて利用したい場合は、[Amazon S3 に接続](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-use-external.html#studio-lab-use-external-s3)するか、[Amazon SageMaker Studio への移行](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-use-migrate.html) を検討してください。
-
-## 既知の問題
-
-コードブロック#6-18でTensorBoardが表示されません、こちらは修正予定です。
