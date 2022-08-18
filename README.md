@@ -43,7 +43,7 @@ $ cd ../ch05
 $ python train_nueralnet.py
 ```
 
-## クラウドに実行
+## クラウド実行
 
 本書のコードは次の表にあるボタンをクリックすることで、AWSの無料の計算環境である[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)上に実行できます(事前の[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)が必要です)。SageMaker Studio Labの使い方は[こちら](./README_studio-lab.md)をご覧ください。[Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp)に最新情報が取得できます。
 
