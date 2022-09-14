@@ -1,0 +1,8 @@
+name: dezero
+
+dependencies:
+  - ipython
+  - ipykernel
+  - python
+  - numpy
+  - matplotlib
