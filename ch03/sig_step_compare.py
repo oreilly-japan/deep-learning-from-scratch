@@ -8,7 +8,7 @@ def sigmoid(x):
 
 
 def step_function(x):
-    return np.array(x > 0, dtype=np.int)
+    return np.array(x > 0, dtype=np.int32)
 
 x = np.arange(-5.0, 5.0, 0.1)
 y1 = sigmoid(x)
