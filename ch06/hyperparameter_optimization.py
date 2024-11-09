@@ -40,7 +40,7 @@ optimization_trial = 100
 results_val = {}
 results_train = {}
 for _ in range(optimization_trial):
-    # 探索したハイパーパラメータの範囲を指定===============
+    # 探索したいハイパーパラメータの範囲を指定===============
     weight_decay = 10 ** np.random.uniform(-8, -4)
     lr = 10 ** np.random.uniform(-6, -2)
     # ================================================
