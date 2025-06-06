@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: deep-learning-from-scratch
+Version: 0.1.0
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: numpy>=1.20
+Dynamic: license-file

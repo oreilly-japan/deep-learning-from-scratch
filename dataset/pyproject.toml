@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataset"
+version = "0.1.0"                     # バージョン
+
+dependencies = []
+requires-python = ">=3.8"             # 対応Pythonバージョン
